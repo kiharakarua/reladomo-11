@@ -18,13 +18,14 @@ central,jakarta.jms,jakarta.jms-api,3.1.0,jar,lib/test,E194CF91A3F908E4846542849
 central,com.h2database,h2,2.1.210,jar,lib/test,A7395AE43062F9237EB441137B789C518C7D4C2F
 central,org.mortbay.jetty,jetty,6.1.26,jar,lib/test,2F546E289FDDD5B1FAB1D4199FBB6E9EF43EE4B0
 central,org.mortbay.jetty,jetty-util,6.1.26,jar,lib/test,E5642FE0399814E1687D55A3862AA5A3417226A9
-central,jakarta.servlet,jakarta.servlet-api,6.1.0,jar,lib/test,1169A246913FE3823782AF7943E7A103634867C5
+central,jakarta.servlet,jakarta.servlet-api,6.0.0,jar,lib/test,ABECC699286E65035EBBA9844C03931357A6A963
 central,junit,junit,4.11,jar,lib/test,4E031BB61DF09069AEB2BFFB4019E7A5034A4EE0
 central,mockobjects,mockobjects-jdk1.4,0.09,jar,lib/test,3E91FB9024C6CB782D57DC28504EEFB936A7FDE5
 central,mockobjects,mockobjects-core,0.09,jar,lib/test,2B3F525B29B03F420E4027083F25AE957D955D3A
 central,org.apache.derby,derby,10.9.1.0,jar,lib/test,4538CF5564AB3C262EEC65C55FDB13965625589C
 central,org.apache.derby,derbynet,10.9.1.0,jar,lib/test,6B40A22F530A83878752FEE1129556246F6ADBFD
-central,org.apache.activemq,activemq-core,5.3.0,jar,lib/test,4C0581D16E94837938C7DC6A6879CAA0194DFAC8
+central,org.apache.activemq,activemq-broker,5.19.0,jar,lib/test,CD150D7F1D279846C8E4DF6C836F3D2A07204ECE
+central,org.apache.activemq,activemq-client,5.19.0,jar,lib/test,A827C44D21B43055B60063BF0E8CCEFDCE11BE4D
 central,jakarta.management.j2ee,jakarta.management.j2ee-api,1.1.4,jar,lib/test,DBBE7575F97EFD0B04F3A8455CF82C256C853055
 #central,com.h2database,h2,1.3.169,jar,lib/test,
 
@@ -74,7 +75,7 @@ central,org.javassist,javassist,3.20.0-GA,jar,lib/serialtest,A9CBCDFB7E9F86FBC74
 central,jakarta.jms,jakarta.jms-api,3.1.0,jar,lib/xa,E194CF91A3F908E4846542849AC11A8E0B3C68AD
 
 #graphql
-central,jakarta.servlet,jakarta.servlet-api,6.1.0,jar,lib/graphql,1169A246913FE3823782AF7943E7A103634867C5
+central,jakarta.servlet,jakarta.servlet-api,6.0.0,jar,lib/graphql,ABECC699286E65035EBBA9844C03931357A6A963
 central,com.graphql-java,graphql-java,13.0,jar,lib/graphql,F3D5C387CF09A13922F719FC984E7B6CBF2A3CCF
 central,com.graphql-java-kickstart,graphql-java-servlet,8.0.0,jar,lib/graphql,F0FEE2A1DD3715EE93473A54FA93F7CFDFC24E46
 central,com.graphql-java,graphql-java-extended-scalars,1.0,jar,lib/graphql,D798F4D543331B26E5E0B359D84D775F66B0E3E0

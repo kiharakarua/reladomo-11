@@ -1409,7 +1409,7 @@
     </macrodef>
 
     <target name="jar-reladomogen" depends="compile-reladomo-generator">
-        <jar jarfile="${root}/target/reladomogen-${reladomo.version}.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11gen-${reladomo.version}.jar" index="true">
             <fileset dir="${root}/reladomogen/src/main/xsd">
                 <include name="mithraobject.xsd"/>
             </fileset>
@@ -1420,7 +1420,7 @@
     </target>
 
     <target name="jar-reladomogen-src" depends="compile-reladomo-generator">
-        <jar jarfile="${root}/target/reladomogen-${reladomo.version}-sources.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11gen-${reladomo.version}-sources.jar" index="true">
             <fileset dir="${root}/reladomogen/src/main/xsd"/>
             <fileset dir="${root}/reladomogen/src/main/templates"/>
             <fileset dir="${root}/reladomogen/src/main/java"/>
@@ -1431,7 +1431,7 @@
     </target>
 
     <target name="jar-reladomogen-javadoc" depends="reladomogen-javadoc">
-        <jar jarfile="${root}/target/reladomogen-${reladomo.version}-javadoc.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11gen-${reladomo.version}-javadoc.jar" index="true">
             <fileset dir="${root}/reladomogen/target/javadoc"/>
             <zipfileset prefix="META-INF" file="${root}/NOTICE.txt"/>
             <zipfileset prefix="META-INF" file="${root}/LICENSE.txt"/>
@@ -1439,7 +1439,7 @@
     </target>
 
     <target name="gen-reladomogen-pom" depends="init-reladomo">
-        <generate-pom module="reladomogen"/>
+        <generate-pom module="reladomo11gen"/>
     </target>
 
     <target name="prep-reladomogen" depends="gen-reladomogen-pom, jar-reladomogen, jar-reladomogen-src, jar-reladomogen-javadoc"/>
@@ -1451,7 +1451,7 @@
             </classpath>
         </taskdef>
 
-        <jar-with-version jarfile="${root}/target/reladomo-${reladomo.version}.jar" index="true" applicationName="reladomo" version="${reladomo.version}">
+        <jar-with-version jarfile="${root}/target/reladomo11-${reladomo.version}.jar" index="true" applicationName="reladomo" version="${reladomo.version}">
             <manifest>
                 <attribute name="Reladomo-Version" value="${reladomo.version}"/>
             </manifest>
@@ -1464,7 +1464,7 @@
     </target>
 
     <target name="jar-reladomo-src" depends="init-reladomo, compile-reladomo">
-        <jar jarfile="${root}/target/reladomo-${reladomo.version}-sources.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-${reladomo.version}-sources.jar" index="true">
             <fileset dir="${root}/reladomo/src/main/java">
                 <include name="**/*.java"/>
             </fileset>
@@ -1477,7 +1477,7 @@
     </target>
 
     <target name="jar-reladomo-javadoc" depends="reladomo-javadoc, reladomo-docbook, reladomo-slides, reladomo-xsddoc">
-        <jar jarfile="${root}/target/reladomo-${reladomo.version}-javadoc.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-${reladomo.version}-javadoc.jar" index="true">
             <fileset dir="${root}/reladomo/target/javadoc"/>
             <fileset dir="${root}/reladomo/target/docbook"/>
             <fileset dir="${root}/reladomo/target/xsddoc"/>
@@ -1503,7 +1503,7 @@
     </target>
 
     <target name="jar-reladomo-graphql-javadoc" depends="reladomo-graphql-javadoc">
-        <jar jarfile="${root}/target/reladomo-graphql-${reladomo.version}-javadoc.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-graphql-${reladomo.version}-javadoc.jar" index="true">
             <fileset dir="${root}/reladomo/target/reladomographql-javadoc"/>
             <zipfileset prefix="META-INF" file="${root}/NOTICE.txt"/>
             <zipfileset prefix="META-INF" file="${root}/LICENSE.txt"/>
@@ -1511,13 +1511,13 @@
     </target>
 
     <target name="gen-reladomo-pom" depends="init-reladomo">
-        <generate-pom module="reladomo"/>
+        <generate-pom module="reladomo11"/>
     </target>
 
     <target name="prep-reladomo" depends="gen-reladomo-pom, jar-reladomo, jar-reladomo-src, jar-reladomo-javadoc"/>
 
     <target name="jar-reladomo-test-util" depends="compile-reladomo-test-util">
-        <jar jarfile="${root}/target/reladomo-test-util-${reladomo.version}.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-test-util-${reladomo.version}.jar" index="true">
             <fileset dir="${root}/reladomo/target/test-util-classes">
                 <include name="**/*"/>
             </fileset>
@@ -1527,7 +1527,7 @@
     </target>
 
     <target name="jar-reladomo-test-util-src" depends="init-reladomo">
-        <jar jarfile="${root}/target/reladomo-test-util-${reladomo.version}-sources.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-test-util-${reladomo.version}-sources.jar" index="true">
             <fileset dir="${root}/reladomo/src/test-util/java"/>
             <zipfileset prefix="META-INF" file="${root}/NOTICE.txt"/>
             <zipfileset prefix="META-INF" file="${root}/LICENSE.txt"/>
@@ -1535,7 +1535,7 @@
     </target>
 
     <target name="jar-reladomo-test-util-javadoc" depends="reladomo-test-util-javadoc">
-        <jar jarfile="${root}/target/reladomo-test-util-${reladomo.version}-javadoc.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-test-util-${reladomo.version}-javadoc.jar" index="true">
             <fileset dir="${root}/reladomo/target/test-util-javadoc"/>
             <zipfileset prefix="META-INF" file="${root}/NOTICE.txt"/>
             <zipfileset prefix="META-INF" file="${root}/LICENSE.txt"/>
@@ -1543,13 +1543,13 @@
     </target>
 
     <target name="gen-reladomo-test-util-pom" depends="init-reladomo">
-        <generate-pom module="reladomo-test-util"/>
+        <generate-pom module="reladomo11-test-util"/>
     </target>
 
     <target name="prep-reladomo-test-util" depends="gen-reladomo-test-util-pom, jar-reladomo-test-util, jar-reladomo-test-util-src, jar-reladomo-test-util-javadoc"/>
 
     <target name="jar-reladomo-gen-util" depends="compile-reladomo-genutil">
-        <jar jarfile="${root}/target/reladomo-gen-util-${reladomo.version}.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-gen-util-${reladomo.version}.jar" index="true">
             <fileset dir="${root}/reladomogenutil/target/classes"/>
             <zipfileset prefix="META-INF" file="${root}/NOTICE.txt"/>
             <zipfileset prefix="META-INF" file="${root}/LICENSE.txt"/>
@@ -1557,7 +1557,7 @@
     </target>
 
     <target name="jar-reladomo-gen-util-src" depends="init-reladomo">
-        <jar jarfile="${root}/target/reladomo-gen-util-${reladomo.version}-sources.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-gen-util-${reladomo.version}-sources.jar" index="true">
             <fileset dir="${root}/reladomogenutil/src/main/java"/>
             <zipfileset prefix="META-INF" file="${root}/NOTICE.txt"/>
             <zipfileset prefix="META-INF" file="${root}/LICENSE.txt"/>
@@ -1565,7 +1565,7 @@
     </target>
 
     <target name="jar-reladomo-gen-util-javadoc" depends="reladomo-gen-util-javadoc">
-        <jar jarfile="${root}/target/reladomo-gen-util-${reladomo.version}-javadoc.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-gen-util-${reladomo.version}-javadoc.jar" index="true">
             <fileset dir="${root}/reladomogenutil/target/javadoc"/>
             <zipfileset prefix="META-INF" file="${root}/NOTICE.txt"/>
             <zipfileset prefix="META-INF" file="${root}/LICENSE.txt"/>
@@ -1573,13 +1573,13 @@
     </target>
 
     <target name="gen-reladomo-gen-util-pom" depends="init-reladomo">
-        <generate-pom module="reladomo-gen-util"/>
+        <generate-pom module="reladomo11-gen-util"/>
     </target>
 
     <target name="prep-reladomo-gen-util" depends="gen-reladomo-gen-util-pom, jar-reladomo-gen-util, jar-reladomo-gen-util-src, jar-reladomo-gen-util-javadoc"/>
 
     <target name="jar-reladomo-graphql" depends="compile-reladomo-graphql">
-        <jar jarfile="${root}/target/reladomo-graphql-${reladomo.version}.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-graphql-${reladomo.version}.jar" index="true">
             <fileset dir="${root}/reladomographql/target/classes"/>
             <zipfileset prefix="META-INF" file="${root}/NOTICE.txt"/>
             <zipfileset prefix="META-INF" file="${root}/LICENSE.txt"/>
@@ -1587,7 +1587,7 @@
     </target>
 
     <target name="jar-reladomo-graphql-src" depends="init-reladomo">
-        <jar jarfile="${root}/target/reladomo-graphql-${reladomo.version}-sources.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-graphql-${reladomo.version}-sources.jar" index="true">
             <fileset dir="${root}/reladomographql/src/main/java"/>
             <zipfileset prefix="META-INF" file="${root}/NOTICE.txt"/>
             <zipfileset prefix="META-INF" file="${root}/LICENSE.txt"/>
@@ -1595,7 +1595,7 @@
     </target>
 
     <target name="gen-reladomo-graphql-pom" depends="init-reladomo">
-        <generate-pom module="reladomo-graphql"/>
+        <generate-pom module="reladomo11-graphql"/>
     </target>
 
     <target name="prep-reladomo-graphql" depends="gen-reladomo-graphql-pom, jar-reladomo-graphql, jar-reladomo-graphql-src, jar-reladomo-graphql-javadoc"/>
@@ -1606,34 +1606,34 @@
         <delete quiet="true" file="${root}/target/bundle-${reladomo.version}.jar"/>
         <dependset>
             <srcfileset dir="${root}/target">
-                <include name="reladomo-${reladomo.version}.pom"/>
-                <include name="reladomo-${reladomo.version}.jar"/>
-                <include name="reladomo-${reladomo.version}-sources.jar"/>
-                <include name="reladomo-${reladomo.version}-javadoc.jar"/>
-                <include name="reladomogen-${reladomo.version}.pom"/>
-                <include name="reladomogen-${reladomo.version}.jar"/>
-                <include name="reladomogen-${reladomo.version}-sources.jar"/>
-                <include name="reladomogen-${reladomo.version}-javadoc.jar"/>
-                <include name="reladomo-gen-util-${reladomo.version}.pom"/>
-                <include name="reladomo-gen-util-${reladomo.version}.jar"/>
-                <include name="reladomo-gen-util-${reladomo.version}-sources.jar"/>
-                <include name="reladomo-gen-util-${reladomo.version}-javadoc.jar"/>
-                <include name="reladomo-test-util-${reladomo.version}.pom"/>
-                <include name="reladomo-test-util-${reladomo.version}.jar"/>
-                <include name="reladomo-test-util-${reladomo.version}-sources.jar"/>
-                <include name="reladomo-test-util-${reladomo.version}-javadoc.jar"/>
-                <include name="reladomo-serial-${reladomo.version}.pom"/>
-                <include name="reladomo-serial-${reladomo.version}.jar"/>
-                <include name="reladomo-serial-${reladomo.version}-sources.jar"/>
-                <include name="reladomo-serial-${reladomo.version}-javadoc.jar"/>
-                <include name="reladomo-xa-${reladomo.version}.pom"/>
-                <include name="reladomo-xa-${reladomo.version}.jar"/>
-                <include name="reladomo-xa-${reladomo.version}-sources.jar"/>
-                <include name="reladomo-xa-${reladomo.version}-javadoc.jar"/>
-                <include name="reladomo-graphql-${reladomo.version}.pom"/>
-                <include name="reladomo-graphql-${reladomo.version}.jar"/>
-                <include name="reladomo-graphql-${reladomo.version}-sources.jar"/>
-                <include name="reladomo-graphql-${reladomo.version}-javadoc.jar"/>
+                <include name="reladomo11-${reladomo.version}.pom"/>
+                <include name="reladomo11-${reladomo.version}.jar"/>
+                <include name="reladomo11-${reladomo.version}-sources.jar"/>
+                <include name="reladomo11-${reladomo.version}-javadoc.jar"/>
+                <include name="reladomo11gen-${reladomo.version}.pom"/>
+                <include name="reladomo11gen-${reladomo.version}.jar"/>
+                <include name="reladomo11gen-${reladomo.version}-sources.jar"/>
+                <include name="reladomo11gen-${reladomo.version}-javadoc.jar"/>
+                <include name="reladomo11-gen-util-${reladomo.version}.pom"/>
+                <include name="reladomo11-gen-util-${reladomo.version}.jar"/>
+                <include name="reladomo11-gen-util-${reladomo.version}-sources.jar"/>
+                <include name="reladomo11-gen-util-${reladomo.version}-javadoc.jar"/>
+                <include name="reladomo11-test-util-${reladomo.version}.pom"/>
+                <include name="reladomo11-test-util-${reladomo.version}.jar"/>
+                <include name="reladomo11-test-util-${reladomo.version}-sources.jar"/>
+                <include name="reladomo11-test-util-${reladomo.version}-javadoc.jar"/>
+                <include name="reladomo11-serial-${reladomo.version}.pom"/>
+                <include name="reladomo11-serial-${reladomo.version}.jar"/>
+                <include name="reladomo11-serial-${reladomo.version}-sources.jar"/>
+                <include name="reladomo11-serial-${reladomo.version}-javadoc.jar"/>
+                <include name="reladomo11-xa-${reladomo.version}.pom"/>
+                <include name="reladomo11-xa-${reladomo.version}.jar"/>
+                <include name="reladomo11-xa-${reladomo.version}-sources.jar"/>
+                <include name="reladomo11-xa-${reladomo.version}-javadoc.jar"/>
+                <include name="reladomo11-graphql-${reladomo.version}.pom"/>
+                <include name="reladomo11-graphql-${reladomo.version}.jar"/>
+                <include name="reladomo11-graphql-${reladomo.version}-sources.jar"/>
+                <include name="reladomo11-graphql-${reladomo.version}-javadoc.jar"/>
             </srcfileset>
             <targetfileset dir="${root}/target" includes="*.asc"/>
         </dependset>
@@ -1642,157 +1642,157 @@
                 <not>
                     <resourcecount count="56">
                         <fileset dir="${root}/target">
-                            <include name="reladomo-${reladomo.version}.pom"/>
-                            <include name="reladomo-${reladomo.version}.jar"/>
-                            <include name="reladomo-${reladomo.version}-sources.jar"/>
-                            <include name="reladomo-${reladomo.version}-javadoc.jar"/>
-                            <include name="reladomogen-${reladomo.version}.pom"/>
-                            <include name="reladomogen-${reladomo.version}.jar"/>
-                            <include name="reladomogen-${reladomo.version}-sources.jar"/>
-                            <include name="reladomogen-${reladomo.version}-javadoc.jar"/>
-                            <include name="reladomo-gen-util-${reladomo.version}.pom"/>
-                            <include name="reladomo-gen-util-${reladomo.version}.jar"/>
-                            <include name="reladomo-gen-util-${reladomo.version}-sources.jar"/>
-                            <include name="reladomo-gen-util-${reladomo.version}-javadoc.jar"/>
-                            <include name="reladomo-test-util-${reladomo.version}.pom"/>
-                            <include name="reladomo-test-util-${reladomo.version}.jar"/>
-                            <include name="reladomo-test-util-${reladomo.version}-sources.jar"/>
-                            <include name="reladomo-test-util-${reladomo.version}-javadoc.jar"/>
-                            <include name="reladomo-serial-${reladomo.version}.pom"/>
-                            <include name="reladomo-serial-${reladomo.version}.jar"/>
-                            <include name="reladomo-serial-${reladomo.version}-sources.jar"/>
-                            <include name="reladomo-serial-${reladomo.version}-javadoc.jar"/>
-                            <include name="reladomo-xa-${reladomo.version}.pom"/>
-                            <include name="reladomo-xa-${reladomo.version}.jar"/>
-                            <include name="reladomo-xa-${reladomo.version}-sources.jar"/>
-                            <include name="reladomo-xa-${reladomo.version}-javadoc.jar"/>
-                            <include name="reladomo-graphql-${reladomo.version}.pom"/>
-                            <include name="reladomo-graphql-${reladomo.version}.jar"/>
-                            <include name="reladomo-graphql-${reladomo.version}-sources.jar"/>
-                            <include name="reladomo-graphql-${reladomo.version}-javadoc.jar"/>
+                            <include name="reladomo11-${reladomo.version}.pom"/>
+                            <include name="reladomo11-${reladomo.version}.jar"/>
+                            <include name="reladomo11-${reladomo.version}-sources.jar"/>
+                            <include name="reladomo11-${reladomo.version}-javadoc.jar"/>
+                            <include name="reladomo11gen-${reladomo.version}.pom"/>
+                            <include name="reladomo11gen-${reladomo.version}.jar"/>
+                            <include name="reladomo11gen-${reladomo.version}-sources.jar"/>
+                            <include name="reladomo11gen-${reladomo.version}-javadoc.jar"/>
+                            <include name="reladomo11-gen-util-${reladomo.version}.pom"/>
+                            <include name="reladomo11-gen-util-${reladomo.version}.jar"/>
+                            <include name="reladomo11-gen-util-${reladomo.version}-sources.jar"/>
+                            <include name="reladomo11-gen-util-${reladomo.version}-javadoc.jar"/>
+                            <include name="reladomo11-test-util-${reladomo.version}.pom"/>
+                            <include name="reladomo11-test-util-${reladomo.version}.jar"/>
+                            <include name="reladomo11-test-util-${reladomo.version}-sources.jar"/>
+                            <include name="reladomo11-test-util-${reladomo.version}-javadoc.jar"/>
+                            <include name="reladomo11-serial-${reladomo.version}.pom"/>
+                            <include name="reladomo11-serial-${reladomo.version}.jar"/>
+                            <include name="reladomo11-serial-${reladomo.version}-sources.jar"/>
+                            <include name="reladomo11-serial-${reladomo.version}-javadoc.jar"/>
+                            <include name="reladomo11-xa-${reladomo.version}.pom"/>
+                            <include name="reladomo11-xa-${reladomo.version}.jar"/>
+                            <include name="reladomo11-xa-${reladomo.version}-sources.jar"/>
+                            <include name="reladomo11-xa-${reladomo.version}-javadoc.jar"/>
+                            <include name="reladomo11-graphql-${reladomo.version}.pom"/>
+                            <include name="reladomo11-graphql-${reladomo.version}.jar"/>
+                            <include name="reladomo11-graphql-${reladomo.version}-sources.jar"/>
+                            <include name="reladomo11-graphql-${reladomo.version}-javadoc.jar"/>
 
-                            <include name="reladomo-${reladomo.version}.pom.asc"/>
-                            <include name="reladomo-${reladomo.version}.jar.asc"/>
-                            <include name="reladomo-${reladomo.version}-sources.jar.asc"/>
-                            <include name="reladomo-${reladomo.version}-javadoc.jar.asc"/>
-                            <include name="reladomogen-${reladomo.version}.pom.asc"/>
-                            <include name="reladomogen-${reladomo.version}.jar.asc"/>
-                            <include name="reladomogen-${reladomo.version}-sources.jar.asc"/>
-                            <include name="reladomogen-${reladomo.version}-javadoc.jar.asc"/>
-                            <include name="reladomo-gen-util-${reladomo.version}.pom.asc"/>
-                            <include name="reladomo-gen-util-${reladomo.version}.jar.asc"/>
-                            <include name="reladomo-gen-util-${reladomo.version}-sources.jar.asc"/>
-                            <include name="reladomo-gen-util-${reladomo.version}-javadoc.jar.asc"/>
-                            <include name="reladomo-test-util-${reladomo.version}.pom.asc"/>
-                            <include name="reladomo-test-util-${reladomo.version}.jar.asc"/>
-                            <include name="reladomo-test-util-${reladomo.version}-sources.jar.asc"/>
-                            <include name="reladomo-test-util-${reladomo.version}-javadoc.jar.asc"/>
-                            <include name="reladomo-serial-${reladomo.version}.pom.asc"/>
-                            <include name="reladomo-serial-${reladomo.version}.jar.asc"/>
-                            <include name="reladomo-serial-${reladomo.version}-sources.jar.asc"/>
-                            <include name="reladomo-serial-${reladomo.version}-javadoc.jar.asc"/>
-                            <include name="reladomo-xa-${reladomo.version}.pom.asc"/>
-                            <include name="reladomo-xa-${reladomo.version}.jar.asc"/>
-                            <include name="reladomo-xa-${reladomo.version}-sources.jar.asc"/>
-                            <include name="reladomo-xa-${reladomo.version}-javadoc.jar.asc"/>
-                            <include name="reladomo-graphql-${reladomo.version}.pom.asc"/>
-                            <include name="reladomo-graphql-${reladomo.version}.jar.asc"/>
-                            <include name="reladomo-graphql-${reladomo.version}-sources.jar.asc"/>
-                            <include name="reladomo-graphql-${reladomo.version}-javadoc.jar.asc"/>
+                            <include name="reladomo11-${reladomo.version}.pom.asc"/>
+                            <include name="reladomo11-${reladomo.version}.jar.asc"/>
+                            <include name="reladomo11-${reladomo.version}-sources.jar.asc"/>
+                            <include name="reladomo11-${reladomo.version}-javadoc.jar.asc"/>
+                            <include name="reladomo11gen-${reladomo.version}.pom.asc"/>
+                            <include name="reladomo11gen-${reladomo.version}.jar.asc"/>
+                            <include name="reladomo11gen-${reladomo.version}-sources.jar.asc"/>
+                            <include name="reladomo11gen-${reladomo.version}-javadoc.jar.asc"/>
+                            <include name="reladomo11-gen-util-${reladomo.version}.pom.asc"/>
+                            <include name="reladomo11-gen-util-${reladomo.version}.jar.asc"/>
+                            <include name="reladomo11-gen-util-${reladomo.version}-sources.jar.asc"/>
+                            <include name="reladomo11-gen-util-${reladomo.version}-javadoc.jar.asc"/>
+                            <include name="reladomo11-test-util-${reladomo.version}.pom.asc"/>
+                            <include name="reladomo11-test-util-${reladomo.version}.jar.asc"/>
+                            <include name="reladomo11-test-util-${reladomo.version}-sources.jar.asc"/>
+                            <include name="reladomo11-test-util-${reladomo.version}-javadoc.jar.asc"/>
+                            <include name="reladomo11-serial-${reladomo.version}.pom.asc"/>
+                            <include name="reladomo11-serial-${reladomo.version}.jar.asc"/>
+                            <include name="reladomo11-serial-${reladomo.version}-sources.jar.asc"/>
+                            <include name="reladomo11-serial-${reladomo.version}-javadoc.jar.asc"/>
+                            <include name="reladomo11-xa-${reladomo.version}.pom.asc"/>
+                            <include name="reladomo11-xa-${reladomo.version}.jar.asc"/>
+                            <include name="reladomo11-xa-${reladomo.version}-sources.jar.asc"/>
+                            <include name="reladomo11-xa-${reladomo.version}-javadoc.jar.asc"/>
+                            <include name="reladomo11-graphql-${reladomo.version}.pom.asc"/>
+                            <include name="reladomo11-graphql-${reladomo.version}.jar.asc"/>
+                            <include name="reladomo11-graphql-${reladomo.version}-sources.jar.asc"/>
+                            <include name="reladomo11-graphql-${reladomo.version}-javadoc.jar.asc"/>
                         </fileset>
                     </resourcecount>
                 </not>
             </condition>
         </fail>
-        <jar jarfile="${root}/target/bundle-reladomo-${reladomo.version}.jar" index="false">
+        <jar jarfile="${root}/target/bundle-reladomo11-${reladomo.version}.jar" index="false">
             <fileset dir="${root}/target">
-                <include name="reladomo-${reladomo.version}.pom"/>
-                <include name="reladomo-${reladomo.version}.jar"/>
-                <include name="reladomo-${reladomo.version}-sources.jar"/>
-                <include name="reladomo-${reladomo.version}-javadoc.jar"/>
+                <include name="reladomo11-${reladomo.version}.pom"/>
+                <include name="reladomo11-${reladomo.version}.jar"/>
+                <include name="reladomo11-${reladomo.version}-sources.jar"/>
+                <include name="reladomo11-${reladomo.version}-javadoc.jar"/>
 
-                <include name="reladomo-${reladomo.version}.pom.asc"/>
-                <include name="reladomo-${reladomo.version}.jar.asc"/>
-                <include name="reladomo-${reladomo.version}-sources.jar.asc"/>
-                <include name="reladomo-${reladomo.version}-javadoc.jar.asc"/>
+                <include name="reladomo11-${reladomo.version}.pom.asc"/>
+                <include name="reladomo11-${reladomo.version}.jar.asc"/>
+                <include name="reladomo11-${reladomo.version}-sources.jar.asc"/>
+                <include name="reladomo11-${reladomo.version}-javadoc.jar.asc"/>
             </fileset>
         </jar>
-        <jar jarfile="${root}/target/bundle-reladomogen-${reladomo.version}.jar" index="false">
+        <jar jarfile="${root}/target/bundle-reladomo11gen-${reladomo.version}.jar" index="false">
             <fileset dir="${root}/target">
-                <include name="reladomogen-${reladomo.version}.pom"/>
-                <include name="reladomogen-${reladomo.version}.jar"/>
-                <include name="reladomogen-${reladomo.version}-sources.jar"/>
-                <include name="reladomogen-${reladomo.version}-javadoc.jar"/>
+                <include name="reladomo11gen-${reladomo.version}.pom"/>
+                <include name="reladomo11gen-${reladomo.version}.jar"/>
+                <include name="reladomo11gen-${reladomo.version}-sources.jar"/>
+                <include name="reladomo11gen-${reladomo.version}-javadoc.jar"/>
 
-                <include name="reladomogen-${reladomo.version}.pom.asc"/>
-                <include name="reladomogen-${reladomo.version}.jar.asc"/>
-                <include name="reladomogen-${reladomo.version}-sources.jar.asc"/>
-                <include name="reladomogen-${reladomo.version}-javadoc.jar.asc"/>
+                <include name="reladomo11gen-${reladomo.version}.pom.asc"/>
+                <include name="reladomo11gen-${reladomo.version}.jar.asc"/>
+                <include name="reladomo11gen-${reladomo.version}-sources.jar.asc"/>
+                <include name="reladomo11gen-${reladomo.version}-javadoc.jar.asc"/>
             </fileset>
         </jar>
-        <jar jarfile="${root}/target/bundle-reladomo-gen-util-${reladomo.version}.jar" index="false">
+        <jar jarfile="${root}/target/bundle-reladomo11-gen-util-${reladomo.version}.jar" index="false">
             <fileset dir="${root}/target">
-                <include name="reladomo-gen-util-${reladomo.version}.pom"/>
-                <include name="reladomo-gen-util-${reladomo.version}.jar"/>
-                <include name="reladomo-gen-util-${reladomo.version}-sources.jar"/>
-                <include name="reladomo-gen-util-${reladomo.version}-javadoc.jar"/>
+                <include name="reladomo11-gen-util-${reladomo.version}.pom"/>
+                <include name="reladomo11-gen-util-${reladomo.version}.jar"/>
+                <include name="reladomo11-gen-util-${reladomo.version}-sources.jar"/>
+                <include name="reladomo11-gen-util-${reladomo.version}-javadoc.jar"/>
 
-                <include name="reladomo-gen-util-${reladomo.version}.pom.asc"/>
-                <include name="reladomo-gen-util-${reladomo.version}.jar.asc"/>
-                <include name="reladomo-gen-util-${reladomo.version}-sources.jar.asc"/>
-                <include name="reladomo-gen-util-${reladomo.version}-javadoc.jar.asc"/>
+                <include name="reladomo11-gen-util-${reladomo.version}.pom.asc"/>
+                <include name="reladomo11-gen-util-${reladomo.version}.jar.asc"/>
+                <include name="reladomo11-gen-util-${reladomo.version}-sources.jar.asc"/>
+                <include name="reladomo11-gen-util-${reladomo.version}-javadoc.jar.asc"/>
             </fileset>
         </jar>
-        <jar jarfile="${root}/target/bundle-reladomo-test-util-${reladomo.version}.jar" index="false">
+        <jar jarfile="${root}/target/bundle-reladomo11-test-util-${reladomo.version}.jar" index="false">
             <fileset dir="${root}/target">
-                <include name="reladomo-test-util-${reladomo.version}.pom"/>
-                <include name="reladomo-test-util-${reladomo.version}.jar"/>
-                <include name="reladomo-test-util-${reladomo.version}-sources.jar"/>
-                <include name="reladomo-test-util-${reladomo.version}-javadoc.jar"/>
+                <include name="reladomo11-test-util-${reladomo.version}.pom"/>
+                <include name="reladomo11-test-util-${reladomo.version}.jar"/>
+                <include name="reladomo11-test-util-${reladomo.version}-sources.jar"/>
+                <include name="reladomo11-test-util-${reladomo.version}-javadoc.jar"/>
 
-                <include name="reladomo-test-util-${reladomo.version}.pom.asc"/>
-                <include name="reladomo-test-util-${reladomo.version}.jar.asc"/>
-                <include name="reladomo-test-util-${reladomo.version}-sources.jar.asc"/>
-                <include name="reladomo-test-util-${reladomo.version}-javadoc.jar.asc"/>
+                <include name="reladomo11-test-util-${reladomo.version}.pom.asc"/>
+                <include name="reladomo11-test-util-${reladomo.version}.jar.asc"/>
+                <include name="reladomo11-test-util-${reladomo.version}-sources.jar.asc"/>
+                <include name="reladomo11-test-util-${reladomo.version}-javadoc.jar.asc"/>
             </fileset>
         </jar>
-        <jar jarfile="${root}/target/bundle-reladomo-serial-${reladomo.version}.jar" index="false">
+        <jar jarfile="${root}/target/bundle-reladomo11-serial-${reladomo.version}.jar" index="false">
             <fileset dir="${root}/target">
-                <include name="reladomo-serial-${reladomo.version}.pom"/>
-                <include name="reladomo-serial-${reladomo.version}.jar"/>
-                <include name="reladomo-serial-${reladomo.version}-sources.jar"/>
-                <include name="reladomo-serial-${reladomo.version}-javadoc.jar"/>
+                <include name="reladomo11-serial-${reladomo.version}.pom"/>
+                <include name="reladomo11-serial-${reladomo.version}.jar"/>
+                <include name="reladomo11-serial-${reladomo.version}-sources.jar"/>
+                <include name="reladomo11-serial-${reladomo.version}-javadoc.jar"/>
 
-                <include name="reladomo-serial-${reladomo.version}.pom.asc"/>
-                <include name="reladomo-serial-${reladomo.version}.jar.asc"/>
-                <include name="reladomo-serial-${reladomo.version}-sources.jar.asc"/>
-                <include name="reladomo-serial-${reladomo.version}-javadoc.jar.asc"/>
+                <include name="reladomo11-serial-${reladomo.version}.pom.asc"/>
+                <include name="reladomo11-serial-${reladomo.version}.jar.asc"/>
+                <include name="reladomo11-serial-${reladomo.version}-sources.jar.asc"/>
+                <include name="reladomo11-serial-${reladomo.version}-javadoc.jar.asc"/>
             </fileset>
         </jar>
-        <jar jarfile="${root}/target/bundle-reladomo-xa-${reladomo.version}.jar" index="false">
+        <jar jarfile="${root}/target/bundle-reladomo11-xa-${reladomo.version}.jar" index="false">
             <fileset dir="${root}/target">
-                <include name="reladomo-xa-${reladomo.version}.pom"/>
-                <include name="reladomo-xa-${reladomo.version}.jar"/>
-                <include name="reladomo-xa-${reladomo.version}-sources.jar"/>
-                <include name="reladomo-xa-${reladomo.version}-javadoc.jar"/>
+                <include name="reladomo11-xa-${reladomo.version}.pom"/>
+                <include name="reladomo11-xa-${reladomo.version}.jar"/>
+                <include name="reladomo11-xa-${reladomo.version}-sources.jar"/>
+                <include name="reladomo11-xa-${reladomo.version}-javadoc.jar"/>
 
-                <include name="reladomo-xa-${reladomo.version}.pom.asc"/>
-                <include name="reladomo-xa-${reladomo.version}.jar.asc"/>
-                <include name="reladomo-xa-${reladomo.version}-sources.jar.asc"/>
-                <include name="reladomo-xa-${reladomo.version}-javadoc.jar.asc"/>
+                <include name="reladomo11-xa-${reladomo.version}.pom.asc"/>
+                <include name="reladomo11-xa-${reladomo.version}.jar.asc"/>
+                <include name="reladomo11-xa-${reladomo.version}-sources.jar.asc"/>
+                <include name="reladomo11-xa-${reladomo.version}-javadoc.jar.asc"/>
             </fileset>
         </jar>
-        <jar jarfile="${root}/target/bundle-reladomo-graphql-${reladomo.version}.jar" index="false">
+        <jar jarfile="${root}/target/bundle-reladomo11-graphql-${reladomo.version}.jar" index="false">
             <fileset dir="${root}/target">
-                <include name="reladomo-graphql-${reladomo.version}.pom"/>
-                <include name="reladomo-graphql-${reladomo.version}.jar"/>
-                <include name="reladomo-graphql-${reladomo.version}-sources.jar"/>
-                <include name="reladomo-graphql-${reladomo.version}-javadoc.jar"/>
+                <include name="reladomo11-graphql-${reladomo.version}.pom"/>
+                <include name="reladomo11-graphql-${reladomo.version}.jar"/>
+                <include name="reladomo11-graphql-${reladomo.version}-sources.jar"/>
+                <include name="reladomo11-graphql-${reladomo.version}-javadoc.jar"/>
 
-                <include name="reladomo-graphql-${reladomo.version}.pom.asc"/>
-                <include name="reladomo-graphql-${reladomo.version}.jar.asc"/>
-                <include name="reladomo-graphql-${reladomo.version}-sources.jar.asc"/>
-                <include name="reladomo-graphql-${reladomo.version}-javadoc.jar.asc"/>
+                <include name="reladomo11-graphql-${reladomo.version}.pom.asc"/>
+                <include name="reladomo11-graphql-${reladomo.version}.jar.asc"/>
+                <include name="reladomo11-graphql-${reladomo.version}-sources.jar.asc"/>
+                <include name="reladomo11-graphql-${reladomo.version}-javadoc.jar.asc"/>
             </fileset>
         </jar>
     </target>
@@ -2121,7 +2121,7 @@
     </target>
 
     <target name="gen-reladomo-serial-pom" depends="init-reladomo-serial">
-        <generate-pom module="reladomo-serial"/>
+        <generate-pom module="reladomo11-serial"/>
     </target>
 
     <target name="reladomo-serial-javadoc">
@@ -2145,7 +2145,7 @@
 
     <target name="jar-reladomo-serial" depends="compile-reladomo-serial">
 
-        <jar jarfile="${root}/target/reladomo-serial-${reladomo.version}.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-serial-${reladomo.version}.jar" index="true">
             <manifest>
                 <attribute name="Reladomo-Version" value="${reladomo.version}"/>
             </manifest>
@@ -2158,7 +2158,7 @@
     </target>
 
     <target name="jar-reladomo-serial-src" depends="compile-reladomo-serial">
-        <jar jarfile="${root}/target/reladomo-serial-${reladomo.version}-sources.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-serial-${reladomo.version}-sources.jar" index="true">
             <fileset dir="${root}/reladomoserial/src/main/java">
                 <include name="**/*.java"/>
             </fileset>
@@ -2168,7 +2168,7 @@
     </target>
 
     <target name="jar-reladomo-serial-javadoc" depends="reladomo-serial-javadoc">
-        <jar jarfile="${root}/target/reladomo-serial-${reladomo.version}-javadoc.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-serial-${reladomo.version}-javadoc.jar" index="true">
             <fileset dir="${root}/reladomoserial/target/javadoc"/>
             <zipfileset prefix="META-INF" file="${root}/NOTICE.txt"/>
             <zipfileset prefix="META-INF" file="${root}/LICENSE.txt"/>
@@ -2305,7 +2305,7 @@
     </target>
 
     <target name="gen-reladomo-xa-pom" depends="init-reladomo-xa">
-        <generate-pom module="reladomo-xa"/>
+        <generate-pom module="reladomo11-xa"/>
     </target>
 
     <target name="reladomo-xa-javadoc">
@@ -2344,7 +2344,7 @@
 
     <target name="jar-reladomo-xa" depends="compile-reladomo-xa">
 
-        <jar jarfile="${root}/target/reladomo-xa-${reladomo.version}.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-xa-${reladomo.version}.jar" index="true">
             <manifest>
                 <attribute name="Reladomo-Version" value="${reladomo.version}"/>
             </manifest>
@@ -2357,7 +2357,7 @@
     </target>
 
     <target name="jar-reladomo-xa-src" depends="compile-reladomo-xa">
-        <jar jarfile="${root}/target/reladomo-xa-${reladomo.version}-sources.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-xa-${reladomo.version}-sources.jar" index="true">
             <fileset dir="${root}/reladomoxa/src/main/java">
                 <include name="**/*.java"/>
             </fileset>
@@ -2367,7 +2367,7 @@
     </target>
 
     <target name="jar-reladomo-xa-javadoc" depends="reladomo-xa-javadoc">
-        <jar jarfile="${root}/target/reladomo-xa-${reladomo.version}-javadoc.jar" index="true">
+        <jar jarfile="${root}/target/reladomo11-xa-${reladomo.version}-javadoc.jar" index="true">
             <fileset dir="${root}/reladomoxa/target/javadoc"/>
             <zipfileset prefix="META-INF" file="${root}/NOTICE.txt"/>
             <zipfileset prefix="META-INF" file="${root}/LICENSE.txt"/>

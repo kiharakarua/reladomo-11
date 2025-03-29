@@ -15,7 +15,7 @@
  */
 package com.gs.fw.common.mithra.transaction;
 
-import javax.transaction.*;
+import jakarta.transaction.*;
 
 public class MultiThreadedTm implements TransactionManager
 {

@@ -32,9 +32,9 @@ import org.mortbay.jetty.Server;
 import org.mortbay.jetty.handler.HandlerList;
 import org.mortbay.jetty.servlet.Context;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 public class ErrorConditionsTest extends PspTestCase
 {

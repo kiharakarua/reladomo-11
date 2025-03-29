@@ -32,11 +32,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.jms.JMSException;
-import javax.jms.Message;
+import jakarta.jms.JMSException;
+import jakarta.jms.Message;
 import javax.naming.NamingException;
-import javax.transaction.RollbackException;
-import javax.transaction.TransactionManager;
+import jakarta.transaction.RollbackException;
+import jakarta.transaction.TransactionManager;
 import javax.transaction.xa.XAException;
 import java.util.concurrent.Future;
 

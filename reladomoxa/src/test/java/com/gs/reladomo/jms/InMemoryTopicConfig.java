@@ -16,10 +16,10 @@
 
 package com.gs.reladomo.jms;
 
-import javax.jms.JMSException;
-import javax.jms.Session;
-import javax.jms.Topic;
-import javax.jms.XAConnectionFactory;
+import jakarta.jms.JMSException;
+import jakarta.jms.Session;
+import jakarta.jms.Topic;
+import jakarta.jms.XAConnectionFactory;
 import javax.naming.NamingException;
 
 public class InMemoryTopicConfig extends JmsTopicConfig

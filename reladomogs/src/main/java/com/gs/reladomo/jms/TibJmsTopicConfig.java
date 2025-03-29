@@ -23,11 +23,11 @@ import org.eclipse.collections.impl.map.mutable.UnifiedMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.jms.JMSException;
-import javax.jms.Session;
-import javax.jms.Topic;
-import javax.jms.XAConnection;
-import javax.jms.XAConnectionFactory;
+import jakarta.jms.JMSException;
+import jakarta.jms.Session;
+import jakarta.jms.Topic;
+import jakarta.jms.XAConnection;
+import jakarta.jms.XAConnectionFactory;
 import javax.naming.NamingException;
 import java.util.concurrent.atomic.AtomicInteger;
 

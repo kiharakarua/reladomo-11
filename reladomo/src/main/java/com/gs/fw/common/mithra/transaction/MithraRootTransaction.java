@@ -33,7 +33,7 @@ import com.gs.fw.common.mithra.util.SmallSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.transaction.*;
+import jakarta.transaction.*;
 import javax.transaction.xa.XAResource;
 import java.util.*;
 
@@ -183,16 +183,16 @@ public class MithraRootTransaction extends MithraLocalTransaction implements Syn
     @Override
     public int getJtaTransactionStatus() throws MithraTransactionException
     {
-        // javax.transaction.Status.STATUS_ACTIVE = 0
-        // javax.transaction.Status.STATUS_COMMITTED = 3
-        // javax.transaction.Status.STATUS_COMMITTING = 8
-        // javax.transaction.Status.STATUS_MARKED_ROLLBACK = 1
-        // javax.transaction.Status.STATUS_NO_TRANSACTION = 6
-        // javax.transaction.Status.STATUS_PREPARED = 2
-        // javax.transaction.Status.STATUS_PREPARING = 7
-        // javax.transaction.Status.STATUS_ROLLEDBACK = 4
-        // javax.transaction.Status.STATUS_ROLLING_BACK = 9
-        // javax.transaction.Status.STATUS_UNKNOWN = 5
+        // jakarta.transaction.Status.STATUS_ACTIVE = 0
+        // jakarta.transaction.Status.STATUS_COMMITTED = 3
+        // jakarta.transaction.Status.STATUS_COMMITTING = 8
+        // jakarta.transaction.Status.STATUS_MARKED_ROLLBACK = 1
+        // jakarta.transaction.Status.STATUS_NO_TRANSACTION = 6
+        // jakarta.transaction.Status.STATUS_PREPARED = 2
+        // jakarta.transaction.Status.STATUS_PREPARING = 7
+        // jakarta.transaction.Status.STATUS_ROLLEDBACK = 4
+        // jakarta.transaction.Status.STATUS_ROLLING_BACK = 9
+        // jakarta.transaction.Status.STATUS_UNKNOWN = 5
         try
         {
             return this.tx.getStatus();

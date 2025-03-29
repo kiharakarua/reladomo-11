@@ -22,8 +22,8 @@ import org.eclipse.collections.api.block.procedure.Procedure;
 import org.eclipse.collections.impl.list.mutable.FastList;
 import org.eclipse.collections.impl.map.mutable.ConcurrentHashMap;
 
-import javax.jms.Message;
-import javax.jms.TopicSubscriber;
+import jakarta.jms.Message;
+import jakarta.jms.TopicSubscriber;
 import javax.transaction.xa.Xid;
 import java.util.List;
 

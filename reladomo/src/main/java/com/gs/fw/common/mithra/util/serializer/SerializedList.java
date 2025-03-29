@@ -21,8 +21,8 @@ import com.gs.fw.common.mithra.MithraManagerProvider;
 import com.gs.fw.common.mithra.MithraObject;
 import com.gs.fw.common.mithra.MithraTransaction;
 
-import javax.transaction.Status;
-import javax.transaction.Synchronization;
+import jakarta.transaction.Status;
+import jakarta.transaction.Synchronization;
 
 public class SerializedList<U extends MithraObject,T extends MithraList<U>>
 {

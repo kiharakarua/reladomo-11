@@ -16,7 +16,7 @@
 
 package com.gs.fw.common.mithra.transaction;
 
-import javax.transaction.Transaction;
+import jakarta.transaction.Transaction;
 
 
 

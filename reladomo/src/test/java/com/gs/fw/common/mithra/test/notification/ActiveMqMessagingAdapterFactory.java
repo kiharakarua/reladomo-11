@@ -24,10 +24,10 @@ import com.gs.fw.common.mithra.notification.JmsMessagingAdapter;
 import org.apache.activemq.ActiveMQTopicSession;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
-import javax.jms.JMSException;
-import javax.jms.Session;
-import javax.jms.TopicConnection;
-import javax.jms.TopicSession;
+import jakarta.jms.JMSException;
+import jakarta.jms.Session;
+import jakarta.jms.TopicConnection;
+import jakarta.jms.TopicSession;
 
 
 

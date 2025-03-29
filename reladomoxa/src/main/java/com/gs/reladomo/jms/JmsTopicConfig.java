@@ -16,7 +16,7 @@
 
 package com.gs.reladomo.jms;
 
-import javax.jms.*;
+import jakarta.jms.*;
 import javax.naming.NamingException;
 
 public abstract class JmsTopicConfig

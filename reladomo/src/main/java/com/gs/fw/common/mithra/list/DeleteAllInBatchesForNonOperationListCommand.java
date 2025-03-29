@@ -20,8 +20,8 @@ import com.gs.fw.common.mithra.MithraTransaction;
 import com.gs.fw.common.mithra.MithraTransactionalObject;
 import com.gs.fw.common.mithra.TransactionalCommand;
 
-import javax.transaction.Synchronization;
-import javax.transaction.Status;
+import jakarta.transaction.Synchronization;
+import jakarta.transaction.Status;
 import java.util.List;
 
 

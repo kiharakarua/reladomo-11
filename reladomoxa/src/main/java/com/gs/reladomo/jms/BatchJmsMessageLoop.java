@@ -25,9 +25,9 @@ import com.gs.reladomo.util.InterruptableBackoff;
 import org.eclipse.collections.impl.list.mutable.FastList;
 import org.slf4j.Logger;
 
-import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.transaction.RollbackException;
+import jakarta.jms.JMSException;
+import jakarta.jms.Message;
+import jakarta.transaction.RollbackException;
 import javax.transaction.xa.XAException;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;

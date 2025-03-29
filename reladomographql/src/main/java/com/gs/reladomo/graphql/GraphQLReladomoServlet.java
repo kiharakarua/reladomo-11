@@ -20,7 +20,7 @@ import graphql.schema.GraphQLSchema;
 import graphql.servlet.GraphQLHttpServlet;
 import graphql.servlet.config.GraphQLConfiguration;
 
-import javax.servlet.annotation.WebServlet;
+import jakarta.servlet.annotation.WebServlet;
 
 @WebServlet(name = "HTTP endpoint for GraphQL-Reladomo stack", urlPatterns = "/graphql")
 public class GraphQLReladomoServlet extends GraphQLHttpServlet

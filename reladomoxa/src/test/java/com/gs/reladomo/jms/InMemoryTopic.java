@@ -16,9 +16,9 @@
 
 package com.gs.reladomo.jms;
 
-import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.jms.Topic;
+import jakarta.jms.JMSException;
+import jakarta.jms.Message;
+import jakarta.jms.Topic;
 
 public class InMemoryTopic implements Topic
 {

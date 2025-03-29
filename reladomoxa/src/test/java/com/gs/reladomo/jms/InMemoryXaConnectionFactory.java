@@ -16,9 +16,9 @@
 
 package com.gs.reladomo.jms;
 
-import javax.jms.JMSException;
-import javax.jms.XAConnection;
-import javax.jms.XAConnectionFactory;
+import jakarta.jms.JMSException;
+import jakarta.jms.XAConnection;
+import jakarta.jms.XAConnectionFactory;
 
 public class InMemoryXaConnectionFactory implements XAConnectionFactory
 {

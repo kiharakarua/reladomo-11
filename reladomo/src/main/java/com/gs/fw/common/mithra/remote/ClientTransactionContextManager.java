@@ -21,8 +21,8 @@ import com.gs.fw.common.mithra.MithraTransactionException;
 import com.gs.fw.common.mithra.MithraTransaction;
 import com.gs.fw.common.mithra.transaction.TransactionLocal;
 
-import javax.transaction.SystemException;
-import javax.transaction.RollbackException;
+import jakarta.transaction.SystemException;
+import jakarta.transaction.RollbackException;
 import java.util.IdentityHashMap;
 
 

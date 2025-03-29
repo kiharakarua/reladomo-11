@@ -24,7 +24,7 @@ import com.gs.fw.common.mithra.test.domain.*;
 import com.gs.fw.common.mithra.util.MithraPerformanceData;
 import com.gs.fw.common.mithra.util.DefaultInfinityTimestamp;
 
-import javax.transaction.Synchronization;
+import jakarta.transaction.Synchronization;
 import javax.transaction.xa.XAException;
 import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;

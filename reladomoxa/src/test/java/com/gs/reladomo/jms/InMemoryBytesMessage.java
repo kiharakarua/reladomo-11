@@ -18,9 +18,9 @@ package com.gs.reladomo.jms;
 
 import java.util.*;
 
-import javax.jms.BytesMessage;
-import javax.jms.Destination;
-import javax.jms.JMSException;
+import jakarta.jms.BytesMessage;
+import jakarta.jms.Destination;
+import jakarta.jms.JMSException;
 
 public class InMemoryBytesMessage implements BytesMessage
 {

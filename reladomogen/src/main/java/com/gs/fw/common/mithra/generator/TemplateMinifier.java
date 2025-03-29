@@ -324,7 +324,7 @@ public class TemplateMinifier
 
     private String replaceServletStuff(String line)
     {
-        line = line.replace("import javax.servlet.*;", "import java.io.*;");
+        line = line.replace("import jakarta.servlet.*;", "import java.io.*;");
         line = line.replace("implements org.apache.jasper.runtime.JspSourceDependent", "implements MithraTemplate");
         line = remove(line, "extends org.apache.jasper.runtime.HttpJspBase");
         line = remove(line, "HttpSession session = null;");
@@ -334,7 +334,7 @@ public class TemplateMinifier
         line = remove(line, "config = pageContext.getServletConfig();");
         line = remove(line, "session = pageContext.getSession();");
         line = remove(line, ", ServletException");
-        if (line.contains(" javax.servlet"))
+        if (line.contains(" jakarta.servlet"))
         {
             line = "";
         }

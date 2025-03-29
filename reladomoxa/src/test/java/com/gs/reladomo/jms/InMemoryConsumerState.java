@@ -19,8 +19,8 @@ package com.gs.reladomo.jms;
 
 import org.eclipse.collections.impl.list.mutable.FastList;
 
-import javax.jms.Message;
-import javax.jms.TopicSubscriber;
+import jakarta.jms.Message;
+import jakarta.jms.TopicSubscriber;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.List;

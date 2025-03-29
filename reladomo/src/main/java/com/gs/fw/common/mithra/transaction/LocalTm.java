@@ -16,7 +16,7 @@
 
 package com.gs.fw.common.mithra.transaction;
 
-import javax.transaction.*;
+import jakarta.transaction.*;
 
 
 public class LocalTm implements TransactionManager

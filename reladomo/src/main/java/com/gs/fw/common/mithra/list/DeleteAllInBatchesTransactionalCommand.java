@@ -21,8 +21,8 @@ import com.gs.fw.common.mithra.MithraTransaction;
 import com.gs.fw.common.mithra.MithraObjectPortal;
 import com.gs.fw.common.mithra.finder.Operation;
 
-import javax.transaction.Synchronization;
-import javax.transaction.Status;
+import jakarta.transaction.Synchronization;
+import jakarta.transaction.Status;
 
 
 

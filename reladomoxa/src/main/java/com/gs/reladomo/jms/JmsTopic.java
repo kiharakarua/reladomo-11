@@ -16,11 +16,11 @@
 
 package com.gs.reladomo.jms;
 
-import javax.jms.JMSException;
-import javax.jms.Session;
-import javax.jms.Topic;
-import javax.jms.XAConnection;
-import javax.jms.XASession;
+import jakarta.jms.JMSException;
+import jakarta.jms.Session;
+import jakarta.jms.Topic;
+import jakarta.jms.XAConnection;
+import jakarta.jms.XASession;
 import javax.naming.NamingException;
 import javax.transaction.xa.XAResource;
 

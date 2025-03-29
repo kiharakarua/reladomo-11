@@ -3,7 +3,7 @@
 central,org.eclipse.collections,eclipse-collections-api,11.0.0,jar,lib/compile,1FA4325CDAD80CFEC8ADE827B8F8D00A54936E35
 central,org.eclipse.collections,eclipse-collections,11.0.0,jar,lib/compile,FDEAF9CBD78FA80AB3F96B9DB9567538B20B1A6E
 central,joda-time,joda-time,2.10.13,jar,lib/compile,86F338C18CEA2A89005556642E81707FF920DD38
-central,org.apache.geronimo.specs,geronimo-jta_1.1_spec,1.1.1,jar,lib/compile,AABAB3165B8EA936B9360ABBF448459C0D04A5A4
+central,jakarta.transaction,jakarta.transaction-api,2.0.1,jar,lib/compile,51A520E3FAE406ABB84E2E1148E6746CE3F80A1A
 central,org.slf4j,slf4j-api,1.7.35,jar,lib/compile,517F3A0687490B72D0E56D815E05608A541AF802
 
 #drivers
@@ -14,18 +14,18 @@ central,org.mariadb.jdbc,mariadb-java-client,1.6.4,jar,lib/drivers,D782981055167
 central,log4j,log4j,1.2.17,jar,lib/test,5AF35056B4D257E4B64B9E8069C0746E8B08629F
 central,org.slf4j,slf4j-log4j12,1.7.21,jar,lib/test,7238B064D1ABA20DA2AC03217D700D91E02460FA
 central,org.slf4j,jcl-over-slf4j,1.7.21,jar,lib/test,331B564A3A42F002A0004B039C1C430DA89062CD
-central,org.apache.geronimo.specs,geronimo-jms_1.1_spec,1.1.1,jar,lib/test,C872B46C601D8DC03633288B81269F9E42762CEA
+central,jakarta.jms,jakarta.jms-api,3.1.0,jar,lib/test,E194CF91A3F908E4846542849AC11A8E0B3C68AD
 central,com.h2database,h2,2.1.210,jar,lib/test,A7395AE43062F9237EB441137B789C518C7D4C2F
 central,org.mortbay.jetty,jetty,6.1.26,jar,lib/test,2F546E289FDDD5B1FAB1D4199FBB6E9EF43EE4B0
 central,org.mortbay.jetty,jetty-util,6.1.26,jar,lib/test,E5642FE0399814E1687D55A3862AA5A3417226A9
-central,javax.servlet,javax.servlet-api,3.0.1,jar,lib/test,6BF0EBB7EFD993E222FC1112377B5E92A13B38DD
+central,jakarta.servlet,jakarta.servlet-api,6.1.0,jar,lib/test,1169A246913FE3823782AF7943E7A103634867C5
 central,junit,junit,4.11,jar,lib/test,4E031BB61DF09069AEB2BFFB4019E7A5034A4EE0
 central,mockobjects,mockobjects-jdk1.4,0.09,jar,lib/test,3E91FB9024C6CB782D57DC28504EEFB936A7FDE5
 central,mockobjects,mockobjects-core,0.09,jar,lib/test,2B3F525B29B03F420E4027083F25AE957D955D3A
 central,org.apache.derby,derby,10.9.1.0,jar,lib/test,4538CF5564AB3C262EEC65C55FDB13965625589C
 central,org.apache.derby,derbynet,10.9.1.0,jar,lib/test,6B40A22F530A83878752FEE1129556246F6ADBFD
 central,org.apache.activemq,activemq-core,5.3.0,jar,lib/test,4C0581D16E94837938C7DC6A6879CAA0194DFAC8
-central,org.apache.geronimo.specs,geronimo-j2ee-management_1.0_spec,1.1,jar,lib/test,057E32617E47E84FC7A26C7C9D3470B2D253AC34
+central,jakarta.management.j2ee,jakarta.management.j2ee-api,1.1.4,jar,lib/test,DBBE7575F97EFD0B04F3A8455CF82C256C853055
 #central,com.h2database,h2,1.3.169,jar,lib/test,
 
 # test coverage libs:
@@ -41,40 +41,40 @@ central,com.google.code.gson,gson,2.8.9,jar,lib/serial,8A432C1D6825781E21A02DB2E
 central,com.fasterxml.jackson.core,jackson-core,2.13.1,jar,lib/serial,51AE921A2ED1E06CA8876F12F32F265E83C0B2B8
 central,com.fasterxml.jackson.core,jackson-databind,2.13.1,jar,lib/serial,698B2D2B15D9A1B7AAE025F1D9F576842285E7F6
 
-central,javax.ws.rs,javax.ws.rs-api,2.0,jar,lib/serial,61F0983EB190954CCDEDE31E786A9E0BD9767C4A
+central,jakarta.ws.rs,jakarta.ws.rs-api,4.0.0,jar,lib/serial,C27A67F84CA491EFCB3FA68F4DF926E8A110069E
 
 central,com.fasterxml.jackson.core,jackson-annotations,2.13.1,jar,lib/serialtest,1CBCBE4623113E6AF92CCAA89884A345270F1A87
 
 central,com.fasterxml.jackson.jaxrs,jackson-jaxrs-json-provider,2.13.1,jar,lib/serialtest,F305A0891E9C917FDD526F3708896B99CF89AF5C
 central,com.fasterxml.jackson.jaxrs,jackson-jaxrs-base,2.13.1,jar,lib/serialtest,2C8AA6362A140F5DE4CD6292F9D92AE09DC03F34
 
-central,org.glassfish.jersey.core,jersey-common,2.25,jar,lib/serialtest,B38E1A1AF6AD75DD9037A767764B0D41801F1C9F
-central,org.glassfish.jersey.core,jersey-server,2.25,jar,lib/serialtest,0874CA16134872781B8C6A2ADFE3BB2AF80BC378
-central,org.glassfish.jersey.core,jersey-client,2.25,jar,lib/serialtest,416A00562F25D7EFDBA015E5C21876D19163EDD0
-central,org.glassfish.jersey.ext,jersey-entity-filtering,2.25,jar,lib/serialtest,52B5A204A79D22041F4B30C2670E95C2456CBCBD
-central,org.glassfish.jersey.media,jersey-media-json-jackson,2.25,jar,lib/serialtest,2C99D40047A50FC43C5886545F7F2148C7E4A384
-central,org.glassfish.jersey.media,jersey-media-jaxb,2.25,jar,lib/serialtest,09AA3EEBA90DCE24F04BF27CD1A4E0D378EC697F
-central,org.glassfish.jersey.bundles.repackaged,jersey-guava,2.25,jar,lib/serialtest,4439BDDB870B210E40CA2E953813930BE424DC0C
+central,org.glassfish.jersey.core,jersey-common,3.1.10,jar,lib/serialtest,D9D17FDEC864F33DE58EFE240EC53816F95C03F3
+central,org.glassfish.jersey.core,jersey-server,3.1.10,jar,lib/serialtest,C0C631CFA916560B24AA3F0AF1550AEC6A87E69F
+central,org.glassfish.jersey.core,jersey-client,3.1.10,jar,lib/serialtest,35D87D5A4AF28C80E380A00EFBA94D9AF8998849
+central,org.glassfish.jersey.ext,jersey-entity-filtering,3.1.10,jar,lib/serialtest,6528601D67F788E0B9EBAEE28EA045BC93CD81F6
+central,org.glassfish.jersey.media,jersey-media-json-jackson,3.1.10,jar,lib/serialtest,0FE379D7A9647CE4C38704457956D1A3630F4188
+central,org.glassfish.jersey.media,jersey-media-jaxb,3.1.10,jar,lib/serialtest,655E7C2EE60C46229725873DA3C037B1CDB2039E
+central,org.glassfish.jersey.bundles.repackaged,jersey-guava,2.26-b03,jar,lib/serialtest,969207EB0861F4C0448924B637734C98760E241C
 
-central,org.glassfish.hk2,hk2-api,2.5.0-b30,jar,lib/serialtest,5C6688A6BAFCD2098BEF4CA45226D5355B816647
-central,org.glassfish.hk2,hk2-utils,2.5.0-b30,jar,lib/serialtest,B17FC7D8082AC00E59CD96FDA9CFF21F24CC367C
-central,org.glassfish.hk2,hk2-locator,2.5.0-b30,jar,lib/serialtest,82056CBBD258647BBC6B80DEBE4E6B7121C61BE9
-central,org.glassfish.hk2.external,javax.inject,2.5.0-b30,jar,lib/serialtest,054B36144FD2FB684F9CEE73D96060BB82E4D363
-central,org.glassfish.jersey.containers,jersey-container-grizzly2-http,2.25,jar,lib/serialtest,ACA5D2802C7D81E4350829696C96AEE2F01FE6A9
-central,org.glassfish.grizzly,grizzly-http-server,2.3.28,jar,lib/serialtest,13BC9A63DAE3A0A623B52FE71753D5413D134540
-central,org.glassfish.grizzly,grizzly-http,2.3.28,jar,lib/serialtest,BB34B4E7FBB66B53AC6D428DCC99F5925C9FF7BD
-central,org.glassfish.grizzly,grizzly-framework,2.3.28,jar,lib/serialtest,23A90F6316B3776699B173CCF9394C69D15B7E9C
+central,org.glassfish.hk2,hk2-api,3.1.1,jar,lib/serialtest,18D114E0DA203809052F5F000803F2DB6C9E9CF5
+central,org.glassfish.hk2,hk2-utils,3.1.1,jar,lib/serialtest,D7F6959B2A724D479D8B1420C4AA03751EB4447F
+central,org.glassfish.hk2,hk2-locator,3.1.1,jar,lib/serialtest,620DF6F26CA3C67984907D9531A2D3F9F831BA08
+central,jakarta.inject,jakarta.inject-api,2.0.1,jar,lib/serialtest,4C28AFE1991A941D7702FE1362C365F0A8641D1E
+central,org.glassfish.jersey.containers,jersey-container-grizzly2-http,3.1.10,jar,lib/serialtest,E8533C345B99C30D2BBD5BA9C44BD959CA10D911
+central,org.glassfish.grizzly,grizzly-http-server,4.0.2,jar,lib/serialtest,964EF18C55AEA25633B12757863E2A3FAE6D1190
+central,org.glassfish.grizzly,grizzly-http,4.0.2,jar,lib/serialtest,52403F90C894105FFE541C690F0A662E0614D590
+central,org.glassfish.grizzly,grizzly-framework,4.0.2,jar,lib/serialtest,DD0F696CC6F09BDC6F57A3A1C0A70615544FFA67
 
-central,javax.validation,validation-api,1.1.0.Final,jar,lib/serialtest,8613AE82954779D518631E05DAA73A6A954817D5
-central,javax.annotation,javax.annotation-api,1.2,jar,lib/serialtest,479C1E06DB31C432330183F5CAE684163F186146
+central,jakarta.validation,jakarta.validation-api,3.1.1,jar,lib/serialtest,EC8622148AFC5564235D17AF80EA80288D0E7F92
+central,jakarta.annotation,jakarta.annotation-api,3.0.0,jar,lib/serialtest,54F928FADEC906A99D558536756D171917B9D936
 
 central,org.javassist,javassist,3.20.0-GA,jar,lib/serialtest,A9CBCDFB7E9F86FBC74D3AFAE65F2248BFBF82A0
 
 #xa libs:
-central,org.apache.geronimo.specs,geronimo-jms_1.1_spec,1.1.1,jar,lib/xa,C872B46C601D8DC03633288B81269F9E42762CEA
+central,jakarta.jms,jakarta.jms-api,3.1.0,jar,lib/xa,E194CF91A3F908E4846542849AC11A8E0B3C68AD
 
 #graphql
-central,javax.servlet,javax.servlet-api,3.0.1,jar,lib/graphql,6BF0EBB7EFD993E222FC1112377B5E92A13B38DD
+central,jakarta.servlet,jakarta.servlet-api,6.1.0,jar,lib/graphql,1169A246913FE3823782AF7943E7A103634867C5
 central,com.graphql-java,graphql-java,13.0,jar,lib/graphql,F3D5C387CF09A13922F719FC984E7B6CBF2A3CCF
 central,com.graphql-java-kickstart,graphql-java-servlet,8.0.0,jar,lib/graphql,F0FEE2A1DD3715EE93473A54FA93F7CFDFC24E46
 central,com.graphql-java,graphql-java-extended-scalars,1.0,jar,lib/graphql,D798F4D543331B26E5E0B359D84D775F66B0E3E0

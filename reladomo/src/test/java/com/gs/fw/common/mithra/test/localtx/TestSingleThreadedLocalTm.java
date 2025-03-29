@@ -19,7 +19,7 @@ package com.gs.fw.common.mithra.test.localtx;
 import com.gs.fw.common.mithra.transaction.LocalTm;
 import junit.framework.TestCase;
 
-import javax.transaction.*;
+import jakarta.transaction.*;
 import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
 import java.io.*;

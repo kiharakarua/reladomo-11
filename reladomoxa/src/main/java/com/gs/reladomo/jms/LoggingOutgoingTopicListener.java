@@ -19,8 +19,8 @@ package com.gs.reladomo.jms;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.jms.BytesMessage;
-import javax.jms.Message;
+import jakarta.jms.BytesMessage;
+import jakarta.jms.Message;
 
 public class LoggingOutgoingTopicListener implements OutgoingTopicListener
 {

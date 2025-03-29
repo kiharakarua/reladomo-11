@@ -20,7 +20,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.gs.fw.common.mithra.MithraException;
 
-import javax.jms.*;
+import jakarta.jms.*;
 
 
 

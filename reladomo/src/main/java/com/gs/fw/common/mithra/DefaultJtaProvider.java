@@ -16,7 +16,7 @@
 
 package com.gs.fw.common.mithra;
 
-import javax.transaction.TransactionManager;
+import jakarta.transaction.TransactionManager;
 
 
 public class DefaultJtaProvider implements JtaProvider

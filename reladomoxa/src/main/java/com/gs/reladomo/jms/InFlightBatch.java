@@ -16,7 +16,7 @@
 
 package com.gs.reladomo.jms;
 
-import javax.jms.Message;
+import jakarta.jms.Message;
 import java.util.List;
 import java.util.concurrent.Future;
 

@@ -19,7 +19,7 @@ package com.gs.reladomo.serial.jaxrs.server;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gs.reladomo.serial.jackson.JacksonReladomoModule;
 
-import javax.ws.rs.ext.ContextResolver;
+import jakarta.ws.rs.ext.ContextResolver;
 
 public class JacksonObjectMapperProvider implements ContextResolver<ObjectMapper>
 {

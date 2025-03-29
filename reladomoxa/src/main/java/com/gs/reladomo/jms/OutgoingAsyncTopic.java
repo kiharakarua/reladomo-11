@@ -22,12 +22,12 @@ import com.gs.fw.common.mithra.transaction.MultiThreadedTx;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.jms.BytesMessage;
-import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.jms.MessageProducer;
+import jakarta.jms.BytesMessage;
+import jakarta.jms.JMSException;
+import jakarta.jms.Message;
+import jakarta.jms.MessageProducer;
 import javax.naming.NamingException;
-import javax.transaction.RollbackException;
+import jakarta.transaction.RollbackException;
 import javax.transaction.xa.XAResource;
 import java.util.List;
 import java.util.Map;

@@ -26,10 +26,10 @@ import com.gs.fw.common.mithra.finder.Operation;
 import com.gs.fw.common.mithra.notification.MithraNotificationEvent;
 
 import javax.transaction.xa.XAResource;
-import javax.transaction.SystemException;
-import javax.transaction.RollbackException;
-import javax.transaction.Synchronization;
-import javax.transaction.Status;
+import jakarta.transaction.SystemException;
+import jakarta.transaction.RollbackException;
+import jakarta.transaction.Synchronization;
+import jakarta.transaction.Status;
 
 
 public class MithraTempTransaction extends MithraLocalTransaction

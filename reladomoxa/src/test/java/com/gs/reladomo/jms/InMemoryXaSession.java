@@ -17,7 +17,7 @@
 
 package com.gs.reladomo.jms;
 
-import javax.jms.*;
+import jakarta.jms.*;
 import javax.transaction.xa.XAResource;
 import java.io.Serializable;
 
